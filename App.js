@@ -9,7 +9,7 @@ import {CalendarView} from "./screens/CalendarView";
 import {CalendarViewReact} from "./screens/CalendarViewReact";
 import {WebappView} from "./screens/WebappView";
 
-
+//änderung
 
 const AppNavigator = createStackNavigator({
 
@@ -18,7 +18,7 @@ const AppNavigator = createStackNavigator({
   },
   Details: {
     screen: TimelineView,
-  },
+  },   
   Calendar: {
     screen: CalendarViewReact,
   },
