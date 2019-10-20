@@ -20,12 +20,9 @@ export class GridView extends Component {
   
     render() {
       return (
-        <View>
-            <Text>
-                
-            </Text>
+        <View style={{flex:1}}>
             <Image source={require('../assets/gridview_header.png')}
-                 style={{margin: 3}} />
+                 style={{width: 100, margin: 3,resizeMode: 'cover'}} />
 
             <View style={{flexDirection:'row'}}>
             <TouchableOpacity
