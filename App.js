@@ -4,7 +4,7 @@ import { ECharts } from "react-native-echarts-wrapper";
 
 import {TimelineView} from "./screens/TimelineView";
 import {GridView} from "./screens/GridView";
-//import {CalendarView} from "./screens/CalendarView";
+import {CalendarSebView} from "./screens/CalendarView";
 
 
 export default class App extends Component { 
@@ -21,8 +21,8 @@ export default class App extends Component {
           <View style={{height: 800}}>
             <TimelineView />
           </View>
-          <View style={{height: 300}}>
-            <View />
+          <View style={{height: 800}}>
+            <CalendarSebView />
           </View>
         </ScrollView>
     );
