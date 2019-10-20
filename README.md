@@ -1,5 +1,7 @@
+![](assets/camel.png)
+
 # cama
-The CAMA 
+My cancer manager
 
 Winner team of the [cancer warriors 
 health Hackathon Erlangen](https://www.healthhackers.de/cancermanagementhackathon/) 
