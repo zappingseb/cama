@@ -4,6 +4,7 @@ import { ECharts } from "react-native-echarts-wrapper";
 
 import {TimelineView} from "./screens/TimelineView";
 import {GridView} from "./screens/GridView";
+import {CalendarView} from "./screens/CalendarView";
 
 
 export default class App extends Component { 
