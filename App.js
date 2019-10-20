@@ -7,6 +7,7 @@ import {TimelineView} from "./screens/TimelineView";
 import {GridView} from "./screens/GridView";
 import {CalendarView} from "./screens/CalendarView";
 import {CalendarViewReact} from "./screens/CalendarViewReact";
+import {WebappView} from "./screens/WebappView";
 
 
 
@@ -20,6 +21,9 @@ const AppNavigator = createStackNavigator({
   },
   Calendar: {
     screen: CalendarViewReact,
+  },
+  Webapp: {
+    screen: WebappView,
   }
 });
 

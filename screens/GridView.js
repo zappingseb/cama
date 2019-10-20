@@ -13,6 +13,10 @@ export class GridView extends Component {
   onPressMedication = () => {
     this.props.navigation.navigate('Calendar')
   }
+
+  onPressMyColon = () => {
+    this.props.navigation.navigate('Webapp')
+  }
   
     render() {
       return (
@@ -40,7 +44,8 @@ export class GridView extends Component {
               <Image source={require('../assets/button_bloodValue.png')}
                  style={{margin: 3}} />
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity
+             onPress={this.onPressMyColon}>
               <Image source={require('../assets/button_myColon.png')}
                  style={{margin: 3}} />
             </TouchableOpacity>
