@@ -53,14 +53,19 @@ class CalendarDayComponent extends React.Component {
       style.color = '#4caf50';
     }
     if (marking.inventory > 0) {
-      style.height = (marking.inventory * 2);
-      style.width = (marking.inventory * 2);
+      style.height = (marking.inventory * 4);
+      style.width = (marking.inventory * 8);
       style.backgroundColor = '#4caf50';
     }
     if (marking.visit > 0) {
-      style.height = (marking.visit * 2);
-      style.width = (marking.visit * 2);
+      style.height = (marking.visit * 4);
+      style.width = (marking.visit * 8);
       style.backgroundColor = '#FF5722';
+    }
+    if (marking.tablette > 0) {
+      style.height = (marking.tablette * 4);
+      style.width = (marking.tablette * 8);
+      style.backgroundColor = '#294B4C';
     }
     return style;
   }

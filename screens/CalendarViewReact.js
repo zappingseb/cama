@@ -4,7 +4,6 @@ import { Calendar } from 'react-native-calendars';
 import moment from 'moment';
 
 import CalendarDayComponent from './CalendarDayComponent';
-import CalendarHeaderComponent from './CalendarHeaderComponent';
 
 let calendarDate = moment();
 
@@ -74,7 +73,13 @@ export class CalendarViewReact extends Component {
             '2019-03-23': {soldOut: false, blocked: false, inventory: 2, visit: 1, tablette:1},
             '2019-03-24': {soldOut: true, blocked: false, inventory: 2, visit: 1},
             '2019-03-25': {soldOut: false, blocked: true, inventory: 0, },
-            '2019-03-26': {soldOut: true, blocked: true, inventory: 2}
+            '2019-03-26': {soldOut: true, blocked: true, inventory: 2},
+            "2019-03-12": {soldOut: false, blocked: false, inventory: 3, tablette: 1},
+            "2019-03-10": {soldOut: false, blocked: true, inventory: 2, tablette: 1},
+            "2019-03-09": {soldOut: false, blocked: true, visit: 2},
+            "2019-03-04": {soldOut: false, blocked: true, inventory: 3},
+            "2019-03-01": {soldOut: false, blocked: false, inventory: 3, visit: 1},
+            "2019-03-15": {soldOut: false, blocked: false, inventory: 3, tablette: 1}
           }}
           horizontal={this.state.horizontal}
           onDayPress={this.onDayPress}
