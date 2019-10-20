@@ -40,32 +40,6 @@ export default class App extends Component {
         }
     ],
   };
-  option = {
-    tooltip: {
-    },
-    calendar: [{
-        left: 'center',
-        top: 'middle',
-        cellSize: [70, 70],
-        yearLabel: {show: false},
-        orient: 'vertical',
-        dayLabel: {
-            firstDay: 1,
-            nameMap: 'cn'
-        },
-        monthLabel: {
-            show: false
-        },
-        range: '2017-03'
-    }],
-    series: [{
-        type: 'custom',
-        coordinateSystem: 'calendar',
-        renderItem: renderItem,
-        dimensions: [null, {type: 'ordinal'}],
-        data: getVirtulData(2017)
-    }]
-}; 
   additionalCode = `
         chart.on('click', function(param) {
             var obj = {
