@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Image } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 export class GridView extends Component { 
     
@@ -8,8 +9,41 @@ export class GridView extends Component {
       return (
         <View>
             <Text>
-                asdasdfasdfffwiejfowief
+                
             </Text>
+            <Image source={require('../assets/gridview_header.png')}
+                 style={{margin: 2}} />
+
+            <View style={{flexDirection:'row'}}>
+            <TouchableOpacity>
+              <Image source={require('../assets/button_documents.png')}
+                 style={{margin: 2}} />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Image source={require('../assets/button_medication.png')}
+                 style={{margin: 2}} />
+            </TouchableOpacity>
+            </View>
+            <View style={{flexDirection:'row'}}>
+            <TouchableOpacity>
+              <Image source={require('../assets/button_bloodValue.png')}
+                 style={{margin: 2}} />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Image source={require('../assets/button_myColon.png')}
+                 style={{margin: 2}} />
+            </TouchableOpacity>
+            </View>
+            <View style={{flexDirection:'row'}}>
+            <TouchableOpacity>
+              <Image source={require('../assets/button_timeline.png')}
+                 style={{margin: 2}} />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Image source={require('../assets/button_myColon.png')}
+                 style={{margin: 2}} />
+            </TouchableOpacity>
+            </View>
         </View>
       );
     }

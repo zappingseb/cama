@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { StyleSheet, SafeAreaView, Button, View, Text } from "react-native";
+import { StyleSheet, SafeAreaView, Button, View, Text, ScrollView } from "react-native";
 import { ECharts } from "react-native-echarts-wrapper";
 
 import {TimelineView} from "./screens/TimelineView";
 import {GridView} from "./screens/GridView";
-import {CalendarView} from "./screens/CalendarView";
+//import {CalendarView} from "./screens/CalendarView";
 
 
 export default class App extends Component { 
@@ -13,13 +13,18 @@ export default class App extends Component {
   render() {
     return (
  
-        <View>
-          <Text>asdfasdfsadfsadf</Text>
-          <View style={{height:150, width: 150}}>
+        <ScrollView>
+          
+          <View style={{height: 800}}>
+            <GridView />
+          </View>
+          <View style={{height: 800}}>
             <TimelineView />
           </View>
-          <GridView />
-        </View>
+          <View style={{height: 300}}>
+            <View />
+          </View>
+        </ScrollView>
     );
   }
 }
