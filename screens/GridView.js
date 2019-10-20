@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, Image } from "react-native";
+import { StyleSheet, View, ScrollView, Text, Image } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 //import { NavigationActions } from 'react-navigation';
 
@@ -14,51 +14,58 @@ export class GridView extends Component {
     this.props.navigation.navigate('Calendar')
   }
 
-  onPressMyColon = () => {
+  onPressDigimeda = () => {
     this.props.navigation.navigate('Webapp')
   }
   
     render() {
       return (
-        <View style={{flex:1}}>
+        <ScrollView style={{flex:1}}>
           <View style={{flex:1}}>
             <Image source={require('../assets/gridview_header.png')}
                  style={{resizeMode: 'cover'}} />
           </View>
-          <View style={{flex: 1, flexDirection:'row'}}>
+
+          <View style={{flexDirection:'row',backgroundColor:'white', height: 180}}>
             <TouchableOpacity
+            style={{backgroundColor:'white', margin: 6}}
              onPress={this.onPressDocuments}>
               <Image source={require('../assets/button_documents.png')}
-                 style={{resizeMode: 'cover'}} />
+                 style={{height: 164, width: 164, resizeMode: 'contain'}} />
             </TouchableOpacity>
             <TouchableOpacity
+              style={{backgroundColor:'white', margin: 6}}
              onPress={this.onPressMedication}>
               <Image source={require('../assets/button_medication.png')}
-                 style={{resizeMode: 'cover'}} />
+                 style={{height: 164, width: 164, resizeMode: 'contain'}} />
             </TouchableOpacity>
           </View>
-          <View style={{flex: 1, flexDirection:'row'}}>
-            <TouchableOpacity>
+
+          <View style={{flexDirection:'row',backgroundColor:'white', height: 180}}>
+            <TouchableOpacity
+            style={{backgroundColor:'white', margin: 6}}
+             onPress={this.onPressDocuments}>
               <Image source={require('../assets/button_bloodValue.png')}
-                 style={{resizeMode: 'cover'}} />
+                 style={{height: 164, width: 164, resizeMode: 'contain'}} />
             </TouchableOpacity>
             <TouchableOpacity
-             onPress={this.onPressMyColon}>
-              <Image source={require('../assets/button_myColon.png')}
-                 style={{resizeMode: 'cover'}} />
+              style={{backgroundColor:'white', margin: 6}}
+             onPress={this.onPressDigimeda}>
+              <Image source={require('../assets/button_digimeda.png')}
+                 style={{height: 164, width: 164, resizeMode: 'contain'}} />
             </TouchableOpacity>
           </View>
-          <View style={{flex: 1, flexDirection:'row'}}>
-            <TouchableOpacity>
-              <Image source={require('../assets/button_timeline.png')}
-                 style={{resizeMode: 'cover'}} />
-            </TouchableOpacity>
-            <TouchableOpacity>
+
+          <View style={{flexDirection:'row',backgroundColor:'white', height: 180}}>
+            <TouchableOpacity
+              style={{backgroundColor:'white', margin: 6}}
+             >
               <Image source={require('../assets/button_myColon.png')}
-                 style={{resizeMode: 'cover'}} />
+                 style={{height: 164, width: 164, resizeMode: 'contain'}} />
             </TouchableOpacity>
-            </View>
-        </View>
+          </View>
+
+        </ScrollView>
       );
     }
   }

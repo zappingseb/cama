@@ -9,7 +9,7 @@ export class WebappView extends Component {
     return (
       <SafeAreaView style={styles.chartContainer}>
         <WebView
-        source={{uri: 'http://127.0.0.1:8080/'}}
+        source={{uri: 'https://www.digimeda.de'}}
         style={{marginTop: 20}}
       />
       </SafeAreaView>
