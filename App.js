@@ -9,7 +9,6 @@ import {CalendarView} from "./screens/CalendarView";
 import {CalendarViewReact} from "./screens/CalendarViewReact";
 import {WebappView} from "./screens/WebappView";
 
-//änderung
 
 const AppNavigator = createStackNavigator({
 

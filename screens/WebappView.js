@@ -8,10 +8,8 @@ export class WebappView extends Component {
   render() {
     return (
       <SafeAreaView style={styles.chartContainer}>
-        <Button title="Clear" onPress={this.onButtonClearPressed} />
-
         <WebView
-        source={{uri: 'https://www.google.de'}}
+        source={{uri: 'http://127.0.0.1:8080/'}}
         style={{marginTop: 20}}
       />
       </SafeAreaView>

@@ -18,7 +18,6 @@ export class CalendarViewReact extends Component {
 
         
       <SafeAreaView style={styles.chartContainer}>
-        <Button title="ClearCalendarReact" onPress={this.onButtonClearPressed} />
         <Calendar
   // Initially visible month. Default = Date()
   current={'2012-03-01'}

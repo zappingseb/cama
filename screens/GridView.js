@@ -21,40 +21,41 @@ export class GridView extends Component {
     render() {
       return (
         <View style={{flex:1}}>
+          <View style={{flex:1}}>
             <Image source={require('../assets/gridview_header.png')}
-                 style={{width: 100, margin: 3,resizeMode: 'cover'}} />
-
-            <View style={{flexDirection:'row'}}>
+                 style={{resizeMode: 'cover'}} />
+          </View>
+          <View style={{flex: 1, flexDirection:'row'}}>
             <TouchableOpacity
              onPress={this.onPressDocuments}>
               <Image source={require('../assets/button_documents.png')}
-                 style={{margin: 3}} />
+                 style={{resizeMode: 'cover'}} />
             </TouchableOpacity>
             <TouchableOpacity
              onPress={this.onPressMedication}>
               <Image source={require('../assets/button_medication.png')}
-                 style={{margin: 3}} />
+                 style={{resizeMode: 'cover'}} />
             </TouchableOpacity>
-            </View>
-            <View style={{flexDirection:'row'}}>
+          </View>
+          <View style={{flex: 1, flexDirection:'row'}}>
             <TouchableOpacity>
               <Image source={require('../assets/button_bloodValue.png')}
-                 style={{margin: 3}} />
+                 style={{resizeMode: 'cover'}} />
             </TouchableOpacity>
             <TouchableOpacity
              onPress={this.onPressMyColon}>
               <Image source={require('../assets/button_myColon.png')}
-                 style={{margin: 3}} />
+                 style={{resizeMode: 'cover'}} />
             </TouchableOpacity>
-            </View>
-            <View style={{flexDirection:'row'}}>
+          </View>
+          <View style={{flex: 1, flexDirection:'row'}}>
             <TouchableOpacity>
               <Image source={require('../assets/button_timeline.png')}
-                 style={{margin: 3}} />
+                 style={{resizeMode: 'cover'}} />
             </TouchableOpacity>
             <TouchableOpacity>
               <Image source={require('../assets/button_myColon.png')}
-                 style={{margin: 3}} />
+                 style={{resizeMode: 'cover'}} />
             </TouchableOpacity>
             </View>
         </View>

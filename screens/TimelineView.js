@@ -72,8 +72,6 @@ export class TimelineView extends Component {
   render() {
     return (
       <SafeAreaView style={styles.chartContainer}>
-        <Button title="Clear" onPress={this.onButtonClearPressed} />
-
         <ECharts
           ref={this.onRef}
           option={this.option}
