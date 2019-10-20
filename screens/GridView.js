@@ -9,6 +9,10 @@ export class GridView extends Component {
   onPressDocuments = () => {
     this.props.navigation.navigate('Details')
   }
+
+  onPressMedication = () => {
+    this.props.navigation.navigate('Calendar')
+  }
   
     render() {
       return (
@@ -25,7 +29,8 @@ export class GridView extends Component {
               <Image source={require('../assets/button_documents.png')}
                  style={{margin: 3}} />
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity
+             onPress={this.onPressMedication}>
               <Image source={require('../assets/button_medication.png')}
                  style={{margin: 3}} />
             </TouchableOpacity>

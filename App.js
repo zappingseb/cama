@@ -17,6 +17,9 @@ const AppNavigator = createStackNavigator({
   },
   Details: {
     screen: TimelineView,
+  },
+  Calendar: {
+    screen: CalendarViewReact,
   }
 });
 
