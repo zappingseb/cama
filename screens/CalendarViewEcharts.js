@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { StyleSheet, SafeAreaView, Button } from "react-native";
 import { ECharts } from "react-native-echarts-wrapper";
 import moment from "moment";
+//import echarts from "echarts";
 //import { WebView } from "react-native-webview";
 
 //var nativeMap = arrayProto.map
