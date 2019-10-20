@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { StyleSheet, SafeAreaView, Button } from "react-native";
+import { StyleSheet, SafeAreaView, Button, View, Text } from "react-native";
 import { ECharts } from "react-native-echarts-wrapper";
 
-import {TimelineView} from "./screens/TimelineView"
+import {TimelineView} from "./screens/TimelineView";
+import {GridView} from "./screens/GridView";
 
 
 export default class App extends Component { 
@@ -12,7 +13,11 @@ export default class App extends Component {
     return (
  
         <View>
-          
+          <Text>asdfasdfsadfsadf</Text>
+          <View style={{height:150, width: 150}}>
+            <TimelineView />
+          </View>
+          <GridView />
         </View>
     );
   }
