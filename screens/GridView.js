@@ -28,28 +28,27 @@ export class GridView extends Component {
 
           <View style={{flexDirection:'row',backgroundColor:'white', height: 180}}>
             <TouchableOpacity
-            style={{backgroundColor:'white', margin: 6}}
-             onPress={this.onPressDocuments}>
+            style={{backgroundColor:'white', margin: 8}}>
               <Image source={require('../assets/button_documents.png')}
                  style={{height: 164, width: 164, resizeMode: 'contain'}} />
             </TouchableOpacity>
             <TouchableOpacity
-              style={{backgroundColor:'white', margin: 6}}
+              style={{backgroundColor:'white', margin: 8}}
              onPress={this.onPressMedication}>
-              <Image source={require('../assets/button_medication.png')}
+              <Image source={require('../assets/button_timeline.png')}
                  style={{height: 164, width: 164, resizeMode: 'contain'}} />
             </TouchableOpacity>
           </View>
 
           <View style={{flexDirection:'row',backgroundColor:'white', height: 180}}>
             <TouchableOpacity
-            style={{backgroundColor:'white', margin: 6}}
+            style={{backgroundColor:'white', margin: 8}}
              onPress={this.onPressDocuments}>
               <Image source={require('../assets/button_bloodValue.png')}
                  style={{height: 164, width: 164, resizeMode: 'contain'}} />
             </TouchableOpacity>
             <TouchableOpacity
-              style={{backgroundColor:'white', margin: 6}}
+              style={{backgroundColor:'white', margin: 8}}
              onPress={this.onPressDigimeda}>
               <Image source={require('../assets/button_digimeda.png')}
                  style={{height: 164, width: 164, resizeMode: 'contain'}} />
@@ -58,7 +57,7 @@ export class GridView extends Component {
 
           <View style={{flexDirection:'row',backgroundColor:'white', height: 180}}>
             <TouchableOpacity
-              style={{backgroundColor:'white', margin: 6}}
+              style={{backgroundColor:'white', margin: 8}}
              >
               <Image source={require('../assets/button_myColon.png')}
                  style={{height: 164, width: 164, resizeMode: 'contain'}} />
