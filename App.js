@@ -1,37 +1,23 @@
 import React, { Component } from "react";
 import { StyleSheet, SafeAreaView, Button, View, Text, ScrollView } from "react-native";
-import { ECharts } from "react-native-echarts-wrapper";
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
 import {TimelineView} from "./screens/TimelineView";
 import {GridView} from "./screens/GridView";
-//import {CalendarView} from "./screens/CalendarView";
+import {CalendarView} from "./screens/CalendarView";
+import {CalendarViewReact} from "./screens/CalendarViewReact";
 
 
-export default class App extends Component { 
-  
 
-  render() {
-    return (
- 
-        <ScrollView>
-          
-          <View style={{height: 800}}>
-            <GridView />
-          </View>
-          <View style={{height: 800}}>
-            <TimelineView />
-          </View>
-          <View style={{height: 300}}>
-            <View />
-          </View>
-        </ScrollView>
-    );
-  }
-}
+const AppNavigator = createStackNavigator({
 
-const styles = StyleSheet.create({
-  chartContainer: {
-    flex: 1,
-    backgroundColor: "#F5FCFF"
+  Home: {
+    screen: GridView,
+  },
+  Details: {
+    screen: TimelineView,
   }
 });
+
+export default createAppContainer(AppNavigator);
