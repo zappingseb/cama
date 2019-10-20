@@ -4,7 +4,6 @@ import { Calendar } from 'react-native-calendars';
 import moment from 'moment';
 
 import CalendarDayComponent from './CalendarDayComponent';
-import CalendarHeaderComponent from './CalendarHeaderComponent';
 
 let calendarDate = moment();
 
