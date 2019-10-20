@@ -10,8 +10,8 @@ export default class App extends Component {
       type: "category",
       data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun",
              "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun",
-             "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun",
-             "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+             "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "asdf",
+             "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "aaa"]
     },
     yAxis: {
       type: "value"
