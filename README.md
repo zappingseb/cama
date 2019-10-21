@@ -23,10 +23,19 @@ the main dependencies were:
 
 ## Wireframe
 
+We build a wireframe with Invision
+
+![](assets/screenshot.png)
+
 https://ginhealthhackers.invisionapp.com/prototype/chat-ck1ym46uw000um801hh5vr10e/play/74117397
 
 ## Slides
 
+slides can be found on [Google Slides](https://docs.google.com/presentation/d/1axs5PVbyGnlPjV0YBAg1m_F0pM9kIcy5J1-uwhQDMdQ/edit?usp=sharing)
+
+![](assets/slides.png)
+
+https://docs.google.com/presentation/d/1axs5PVbyGnlPjV0YBAg1m_F0pM9kIcy5J1-uwhQDMdQ/edit?usp=sharing
 ---
 
 Icons made by [Smashicons](https://www.flaticon.com/authors/smashicons) from [www.flaticon.com](https://www.flaticon.com/)
