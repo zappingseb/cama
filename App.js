@@ -6,7 +6,6 @@ import { createStackNavigator } from 'react-navigation-stack';
 import {TimelineView} from "./screens/TimelineView";
 import {GridView} from "./screens/GridView";
 import {CalendarView} from "./screens/CalendarView";
-import {CalendarViewReact} from "./screens/CalendarViewReact";
 import {WebappView} from "./screens/WebappView";
 
 
@@ -19,7 +18,7 @@ const AppNavigator = createStackNavigator({
     screen: TimelineView,
   },   
   Calendar: {
-    screen: CalendarViewReact,
+    screen: CalendarView,
   },
   Webapp: {
     screen: WebappView,

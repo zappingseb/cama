@@ -7,7 +7,7 @@ import CalendarDayComponent from './CalendarDayComponent';
 
 let calendarDate = moment();
 
-export class CalendarViewReact extends Component {
+export class CalendarView extends Component {
 
   constructor(props) {
     super(props);
