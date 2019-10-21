@@ -23,7 +23,7 @@ export class GridView extends Component {
         <ScrollView style={{flex:1}}>
           <View style={{flex:1}}>
             <Image source={require('../assets/gridview_header.png')}
-                 style={{resizeMode: 'cover'}} />
+                 style={{resizeMode: 'contain'}} />
           </View>
 
           <View style={{flexDirection:'row',backgroundColor:'white', height: 180}}>

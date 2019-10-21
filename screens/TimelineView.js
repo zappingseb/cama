@@ -10,18 +10,18 @@ export class TimelineView extends Component {
       type: "category",
       data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun",
              "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun",
-             "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "asdf",
-             "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "aaa"]
+             "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun",
+             "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
     },
     yAxis: {
       type: "value"
     },
     series: [
       {
-        data: [820, 932, 901, 934, 1290, 1330, 1320,
-               820, 932, 901, 934, 1290, 1330, 1320,
-               820, 932, 901, 934, 1290, 1330, 1320,
-               820, 932, 901, 934, 1290, 1330, 1320],
+        data: [820, 932, 1100, 934, 1290, 1220, 1320,
+               1000, 932, 990, 1100, 1290, 1330, 1320,
+               1241, 932, 1000, 934, 1290, 1330, 1100,
+               1000, 932, 950, 934, 1290, 1330, 1320],
         type: "line",
         symbolSize:30
       }
@@ -55,7 +55,7 @@ export class TimelineView extends Component {
     const obj = JSON.parse(param);
 
     if (obj.type === "event_clicked") {
-      alert(`you tapped the chart series: ${obj.data}`);
+      alert(`Value: ${obj.data}`);
     }
   };
 
