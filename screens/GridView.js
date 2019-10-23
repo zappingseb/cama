@@ -1,10 +1,17 @@
 import React, { Component } from "react";
 import { StyleSheet, View, ScrollView, Text, Image, Button } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
-//import { NavigationActions } from 'react-navigation';
+import { DraggableGrid } from 'react-native-draggable-grid'; // Terminal installation: "npm install react-native-draggable-grid --save"
 
 
-export class GridView extends Component {
+interface MyTestProps {
+}
+interface MyTestState {
+  data: { key: string, name: string }[];
+}
+
+export class GridView extends Component<MyTestProps, MyTestState>{
+  //header customization of grid view
   static navigationOptions = {
     title: 'cama',
     headerStyle: {
@@ -19,19 +26,19 @@ export class GridView extends Component {
       textAlign: 'center'
     },
     headerLeft: () => (
-      <TouchableOpacity 
-      style={{marginLeft: 12}} 
-      onPress={() => alert('You clicked the MENU')}>
-        <Image source={require('../assets/icon_headerMenu.png')} style={{height:26, width: 26}}/>
+      <TouchableOpacity
+        style={{ marginLeft: 12 }}
+        onPress={() => alert('You clicked the MENU')}>
+        <Image source={require('../assets/icon_headerMenu.png')} style={{ height: 26, width: 26 }} />
       </TouchableOpacity>
-      ),
+    ),
     headerRight: () => (
-      <TouchableOpacity 
-      style={{marginRight: 12}} 
-      onPress={() => alert('You clicked the ACCOUNT MENU')}>
-        <Image source={require('../assets/icon_headerAccount.png')} style={{height:26, width: 26}}/>
+      <TouchableOpacity
+        style={{ marginRight: 12 }}
+        onPress={() => alert('You clicked the ACCOUNT MENU')}>
+        <Image source={require('../assets/icon_headerAccount.png')} style={{ height: 26, width: 26 }} />
       </TouchableOpacity>
-      )
+    )
   };
 
 
@@ -47,67 +54,53 @@ export class GridView extends Component {
     this.props.navigation.navigate('Webapp')
   }
 
+  constructor(props: MyTestProps) {
+    super(props);
+    this.state = {
+      data: [
+        { name: 'documents', key: 'module_documents', icon: require('../assets/icon_documents.png') },
+        { name: 'blood values', key: 'module_bloodValues', icon: require('../assets/icon_bloodValues.png') },
+        { name: 'medication', key: 'module_medication', icon: require('../assets/icon_medication.png') },
+        { name: 'my colon', key: 'module_myColon', icon: require('../assets/icon_myColon.png') },
+        { name: 'timeline', key: 'module_timeline', icon: require('../assets/icon_timeline.png') },
+      ],
+    };
+  }
+
+  renderItem = (item: { name: string, key: string }) => {
+    return (
+      <View
+        style={{backgroundColor:'white'}}
+        key={item.key}>
+        <TouchableOpacity style={styles.tileContainer}>
+          <Text style={styles.tileText}>{item.name}</Text>
+          <Image source={item.icon}
+            style={{ height: 64, width: 64, resizeMode: 'contain' }} />
+        </TouchableOpacity>
+      </View>
+    );
+  }
+
   render() {
     return (
-      <ScrollView style={{ flex: 1 }}>
-        <View style={{ flex: 1 }}>
-          <Image source={require('../assets/gridview_header2.png')}
-            style={{ width: 360, resizeMode: 'contain' }} />
-        </View>
+      <View style={{ flex: 1 }}>
+        <Image 
+        source={require('../assets/gridview_header2.png')}
+        style={{height: 32, width: 340, marginBottom: 4, resizeMode: 'cover'}} />
 
-        <View style={styles.row}>
-          <TouchableOpacity style={{ flex: 1 }}>
-            <View style={styles.tileContainer}>
-              <Text style={styles.tileText}>
-                blood values
-                </Text>
-              <Image source={require('../assets/icon_bloodValue.png')}
-                style={{ height: 64, width: 64, resizeMode: 'contain' }} />
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={{ flex: 1 }}
-            onPress={this.onPressMedication}>
-            <Image source={require('../assets/button_timeline.png')}
-              style={{ height: 150, width: 150, resizeMode: 'contain' }} />
-          </TouchableOpacity>
-        </View>
-
-        <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginTop: 8 }}>
-          <TouchableOpacity
-            style={{ flex: 1 }}
-            onPress={this.onPressDocuments}>
-            <Image source={require('../assets/button_bloodValue.png')}
-              style={{ height: 150, width: 150, resizeMode: 'contain' }} />
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={{ flex: 1 }}
-            onPress={this.onPressDigimeda}>
-            <Image source={require('../assets/button_digimeda.png')}
-              style={{ height: 150, width: 150, resizeMode: 'contain' }} />
-          </TouchableOpacity>
-        </View>
-
-        <View style={{ flexDirection: 'row' }}>
-          <TouchableOpacity
-            style={{ backgroundColor: 'white', margin: 8 }}
-          >
-            <Image source={require('../assets/button_myColon.png')}
-              style={{ height: 164, width: 164, resizeMode: 'contain' }} />
-          </TouchableOpacity>
-        </View>
-
-      </ScrollView>
+        <DraggableGrid
+          style={{ flex: 1 }}
+          numColumns={2}
+          renderItem={this.renderItem}
+          data={this.state.data}
+          onItemPress={this.onPressDocuments}
+        />
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  row: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginTop: 8
-  },
   tileContainer: {
     height: 150,
     width: 150,
@@ -118,7 +111,7 @@ const styles = StyleSheet.create({
     borderColor: '#ec9b3b'
   },
   tileText: {
-    color: '#becccc',
+    color: '#cfdddd',
     fontSize: 24
   },
   tileIcon: {
