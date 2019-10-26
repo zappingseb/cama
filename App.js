@@ -14,7 +14,7 @@ const AppNavigator = createStackNavigator({
   Home: {
     screen: GridView,
   },
-  Details: {
+  Timeline: {
     screen: TimelineView,
   },   
   Calendar: {

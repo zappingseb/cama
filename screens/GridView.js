@@ -42,17 +42,25 @@ export class GridView extends Component<MyTestProps, MyTestState>{
   };
 
 
-  onPressDocuments = () => {
-    this.props.navigation.navigate('Details')
+
+  onPressGridElement = (item) => {
+    if (item.key == 'module_timeline'){
+      this.props.navigation.navigate('Calendar')
+    }
+    if (item.key == 'module_bloodValues'){
+      this.props.navigation.navigate('Timeline')
+    }
+    if (item.key == 'module_myColon'){
+      this.props.navigation.navigate('Webapp')
+    }
+    if (item.key == 'module_documents'){
+      alert('Module documents clicked');
+    }
+    if (item.key == 'module_medication'){
+      alert('Module medication clicked');
+    }
   }
 
-  onPressTimeline = () => {
-    this.props.navigation.navigate('Calendar')
-  }
-
-  onPressDigimeda = () => {
-    this.props.navigation.navigate('Webapp')
-  }
 
   constructor(props: MyTestProps) {
     super(props);
@@ -70,12 +78,12 @@ export class GridView extends Component<MyTestProps, MyTestState>{
   renderItem = (item: { name: string, key: string }) => {
     return (
       <View
-        style={{backgroundColor:'white'}}
+        style={{flex: 1}}
         key={item.key}>
         <TouchableOpacity style={styles.tileContainer}>
           <Text style={styles.tileText}>{item.name}</Text>
           <Image source={item.icon}
-            style={{ height: 64, width: 64, resizeMode: 'contain' }} />
+            style={{resizeMode: 'contain' }} />
         </TouchableOpacity>
       </View>
     );
@@ -89,11 +97,11 @@ export class GridView extends Component<MyTestProps, MyTestState>{
         style={{height: 32, width: 340, marginBottom: 4, resizeMode: 'cover'}} />
 
         <DraggableGrid
-          style={{ flex: 1 }}
+          style={{ flex: 1}}
           numColumns={2}
           renderItem={this.renderItem}
           data={this.state.data}
-          onItemPress={this.onPressTimeline}
+          onItemPress={this.onPressGridElement}
         />
       </View>
     );
@@ -111,11 +119,8 @@ const styles = StyleSheet.create({
     borderColor: '#ec9b3b'
   },
   tileText: {
+    flex: 1,
     color: '#cfdddd',
     fontSize: 24
   },
-  tileIcon: {
-    flex: 1,
-    backgroundColor: "#F5FCFF"
-  }
 });
