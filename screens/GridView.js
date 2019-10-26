@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, ScrollView, Text, Image, Button } from "react-native";
+import { StyleSheet, View, Text, Image} from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { DraggableGrid } from 'react-native-draggable-grid'; // Terminal installation: "npm install react-native-draggable-grid --save"
 
@@ -46,7 +46,7 @@ export class GridView extends Component<MyTestProps, MyTestState>{
     this.props.navigation.navigate('Details')
   }
 
-  onPressMedication = () => {
+  onPressTimeline = () => {
     this.props.navigation.navigate('Calendar')
   }
 
@@ -93,7 +93,7 @@ export class GridView extends Component<MyTestProps, MyTestState>{
           numColumns={2}
           renderItem={this.renderItem}
           data={this.state.data}
-          onItemPress={this.onPressDocuments}
+          onItemPress={this.onPressTimeline}
         />
       </View>
     );

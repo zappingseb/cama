@@ -46,7 +46,8 @@ class CalendarDayComponent extends React.Component {
   getFooterTextStyle() {
     const { marking = {} } = this.props;
     const style = {
-      color: '#c1c2c1'
+      color: '#c1c2c1',
+      borderRadius: 100
     };
 
     if (marking.inventory > 0) {
@@ -54,17 +55,17 @@ class CalendarDayComponent extends React.Component {
     }
     if (marking.inventory > 0) {
       style.height = (marking.inventory * 4);
-      style.width = (marking.inventory * 8);
+      style.width = (marking.inventory * 4);
       style.backgroundColor = '#4caf50';
     }
     if (marking.visit > 0) {
       style.height = (marking.visit * 4);
-      style.width = (marking.visit * 8);
+      style.width = (marking.visit * 4);
       style.backgroundColor = '#FF5722';
     }
     if (marking.tablette > 0) {
       style.height = (marking.tablette * 4);
-      style.width = (marking.tablette * 8);
+      style.width = (marking.tablette * 4);
       style.backgroundColor = '#294B4C';
     }
     return style;
@@ -117,13 +118,8 @@ class CalendarDayComponent extends React.Component {
             {String(this.props.children)}
           </Text>
         </TouchableOpacity>
-        <View>
-          <View style={this.getFooterTextStyle()}>
-            
-          </View>
-          <View style={this.getFooterTextStyle()}>
-            
-          </View>
+        <View style={{alignItems: 'center'}}>
+          <View style={this.getFooterTextStyle()} />
         </View>
       </View>
     );
