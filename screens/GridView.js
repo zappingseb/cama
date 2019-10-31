@@ -1,14 +1,17 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, Image} from "react-native";
+import { Dimensions, StyleSheet, View, Text, Image} from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { DraggableGrid } from 'react-native-draggable-grid'; // Terminal installation: "npm install react-native-draggable-grid --save"
-
 
 interface MyTestProps {
 }
 interface MyTestState {
   data: { key: string, name: string }[];
 }
+
+const tileHeight = Math.round(Dimensions.get('window').width / 2 - 20);
+const tileWidth = Math.round(Dimensions.get('window').width / 2 - 20);
+
 
 export class GridView extends Component<MyTestProps, MyTestState>{
   //header customization of grid view
@@ -83,7 +86,7 @@ export class GridView extends Component<MyTestProps, MyTestState>{
         <TouchableOpacity style={styles.tileContainer}>
           <Text style={styles.tileText}>{item.name}</Text>
           <Image source={item.icon}
-            style={{resizeMode: 'contain' }} />
+            style={{resizeMode: 'contain'}} />
         </TouchableOpacity>
       </View>
     );
@@ -110,13 +113,13 @@ export class GridView extends Component<MyTestProps, MyTestState>{
 
 const styles = StyleSheet.create({
   tileContainer: {
-    height: 150,
-    width: 150,
+    height: tileHeight,
+    width: tileWidth,
     alignItems: 'center',
     justifyContent: 'space-around',
     backgroundColor: "#325c5d",
     borderWidth: 2,
-    borderColor: '#ec9b3b'
+    borderColor: '#ec9b3b',
   },
   tileText: {
     flex: 1,

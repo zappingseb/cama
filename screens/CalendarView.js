@@ -9,6 +9,13 @@ let calendarDate = moment();
 
 export class CalendarView extends Component {
 
+  static navigationOptions = {
+    title: 'timeline',
+    headerStyle: {
+      backgroundColor: '#5eb7b7'
+    }
+  }
+
   constructor(props) {
     super(props);
 

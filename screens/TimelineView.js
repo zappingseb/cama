@@ -4,6 +4,13 @@ import { ECharts } from "react-native-echarts-wrapper";
 
 
 export class TimelineView extends Component { 
+
+  static navigationOptions = {
+    title: 'blood values',
+    headerStyle: {
+      backgroundColor: '#5eb7b7'
+    }
+  }
   // Test Line Chart
   option = {
     xAxis: {

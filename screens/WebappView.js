@@ -3,6 +3,12 @@ import { StyleSheet, SafeAreaView, Button } from "react-native";
 import {WebView} from "react-native-webview";
 
 export class WebappView extends Component { 
+  static navigationOptions = {
+    title: 'digimeda',
+    headerStyle: {
+      backgroundColor: '#5eb7b7'
+    }
+  }
   
 
   render() {
