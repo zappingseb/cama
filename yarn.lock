@@ -2641,8 +2641,8 @@ lodash.throttle@^4.1.1:
   resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
 
 lodash@^4.0.0, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.5.0, lodash@^4.6.0, lodash@^4.6.1:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
 
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
   version "1.4.0"
@@ -3699,6 +3699,10 @@ react-native-calendars@^1.212.0:
     lodash "^4.0.0"
     prop-types "^15.5.10"
     xdate "^0.8.0"
+
+react-native-draggable-grid@^1.1.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-native-draggable-grid/-/react-native-draggable-grid-1.2.1.tgz#6cd15687e869da6975c2fa939b68182c49815472"
 
 react-native-echarts-wrapper@^2.0.0:
   version "2.0.0"
