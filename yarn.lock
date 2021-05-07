@@ -3700,6 +3700,10 @@ react-native-calendars@^1.212.0:
     prop-types "^15.5.10"
     xdate "^0.8.0"
 
+react-native-draggable-grid@^1.1.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-native-draggable-grid/-/react-native-draggable-grid-1.2.1.tgz#6cd15687e869da6975c2fa939b68182c49815472"
+
 react-native-echarts-wrapper@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/react-native-echarts-wrapper/-/react-native-echarts-wrapper-2.0.0.tgz#87c539841418ef900bc3e07efa8aae135d231b1d"
@@ -4433,8 +4437,8 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
 ua-parser-js@^0.7.18, ua-parser-js@^0.7.19:
-  version "0.7.20"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.20.tgz#7527178b82f6a62a0f243d1f94fd30e3e3c21098"
+  version "0.7.28"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
 
 uglify-es@^3.1.9:
   version "3.3.9"
